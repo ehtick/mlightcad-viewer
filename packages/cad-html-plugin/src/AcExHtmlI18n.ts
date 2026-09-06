@@ -92,6 +92,23 @@ export type AcExHtmlMessageKey =
   | 'drawStyle.rgb'
   | 'drawStyle.input'
   | 'drawStyle.inputPlaceholder'
+  | 'shortCutToolbar.more'
+  | 'shortCutToolbar.undo'
+  | 'shortCutToolbar.redo'
+  | 'shortCutToolbar.erase'
+  | 'textHeight.title'
+  | 'textHeight.close'
+  | 'textHeight.ok'
+  | 'textHeight.cancel'
+  | 'textHeight.adaptive'
+  | 'textHeight.custom'
+  | 'textHeight.customPlaceholder'
+  | 'textHeight.fromScreen'
+  | 'textHeight.fromScreenHint'
+  | 'textHeight.screenPxPlaceholder'
+  | 'textHeight.screenUnit'
+  | 'textHeight.convert'
+  | 'entityPick.cancel'
   | 'layers.title'
   | 'layers.close'
   | 'layers.showAll'
@@ -286,6 +303,30 @@ const BASE_MESSAGES: Record<Exclude<AcExHtmlLocale, 'ar'>, AcExMessageTree> = {
       rgb: 'RGB: ',
       input: 'Color',
       inputPlaceholder: '1-255 or #RRGGBB'
+    },
+    shortCutToolbar: {
+      more: 'More',
+      undo: 'Undo',
+      redo: 'Redo',
+      erase: 'Delete'
+    },
+    textHeight: {
+      title: 'Text Height',
+      close: 'Close',
+      ok: 'OK',
+      cancel: 'Cancel',
+      adaptive: 'Fit to screen',
+      custom: 'Custom text height',
+      customPlaceholder: 'World height',
+      fromScreen: 'From screen size',
+      fromScreenHint:
+        'Enter how large the text should look on screen at the current zoom. It is converted to a fixed world-space height that stays constant when you zoom later.',
+      screenPxPlaceholder: 'Font size',
+      screenUnit: 'px',
+      convert: 'Convert'
+    },
+    entityPick: {
+      cancel: 'Cancel selection'
     },
     layers: {
       title: 'Layers',
@@ -502,6 +543,30 @@ const BASE_MESSAGES: Record<Exclude<AcExHtmlLocale, 'ar'>, AcExMessageTree> = {
       input: '颜色',
       inputPlaceholder: '1-255 或 #RRGGBB'
     },
+    shortCutToolbar: {
+      more: '更多',
+      undo: '撤销',
+      redo: '重做',
+      erase: '删除'
+    },
+    textHeight: {
+      title: '字高设置',
+      close: '关闭',
+      ok: '确定',
+      cancel: '取消',
+      adaptive: '自适应屏幕',
+      custom: '自定义字高',
+      customPlaceholder: '世界坐标字高',
+      fromScreen: '按屏幕字号换算',
+      fromScreenHint:
+        '按当前视图缩放，输入希望看到的屏幕字号（像素），换算为固定的世界坐标字高；之后缩放时字的世界高度不变。',
+      screenPxPlaceholder: '屏幕字号',
+      screenUnit: 'px',
+      convert: '换算'
+    },
+    entityPick: {
+      cancel: '取消选择'
+    },
     layers: {
       title: '图层',
       close: '关闭图层',
@@ -708,6 +773,30 @@ const BASE_MESSAGES: Record<Exclude<AcExHtmlLocale, 'ar'>, AcExMessageTree> = {
       rgb: 'RGB: ',
       input: 'Barva',
       inputPlaceholder: '1-255 nebo #RRGGBB'
+    },
+    shortCutToolbar: {
+      more: 'Více',
+      undo: 'Zpět',
+      redo: 'Znovu',
+      erase: 'Smazat'
+    },
+    textHeight: {
+      title: 'Výška textu',
+      close: 'Zavřít',
+      ok: 'OK',
+      cancel: 'Zrušit',
+      adaptive: 'Přizpůsobit obrazovce',
+      custom: 'Vlastní výška textu',
+      customPlaceholder: 'Světová výška',
+      fromScreen: 'Ze velikosti na obrazovce',
+      fromScreenHint:
+        'Zadejte, jak velký má text vypadat na obrazovce při aktuálním zoomu. Přepočítá se na pevnou světovou výšku, která se při pozdějším zoomování nemění.',
+      screenPxPlaceholder: 'Velikost písma',
+      screenUnit: 'px',
+      convert: 'Přepočítat'
+    },
+    entityPick: {
+      cancel: 'Zrušit výběr'
     },
     layers: {
       title: 'Hladiny',
@@ -923,6 +1012,30 @@ const BASE_MESSAGES: Record<Exclude<AcExHtmlLocale, 'ar'>, AcExMessageTree> = {
       rgb: 'RGB: ',
       input: 'Renk',
       inputPlaceholder: '1-255 veya #RRGGBB'
+    },
+    shortCutToolbar: {
+      more: 'Daha fazla',
+      undo: 'Geri al',
+      redo: 'Yinele',
+      erase: 'Sil'
+    },
+    textHeight: {
+      title: 'Yazı Yüksekliği',
+      close: 'Kapat',
+      ok: 'Tamam',
+      cancel: 'İptal',
+      adaptive: 'Ekrana uyarla',
+      custom: 'Özel yazı yüksekliği',
+      customPlaceholder: 'Dünya yüksekliği',
+      fromScreen: 'Ekran boyutundan',
+      fromScreenHint:
+        'Geçerli yakınlaştırmada ekranda istediğiniz yazı boyutunu girin. Sabit bir dünya yüksekliğine dönüştürülür; sonra yakınlaştırınca bu yükseklik değişmez.',
+      screenPxPlaceholder: 'Yazı boyutu',
+      screenUnit: 'px',
+      convert: 'Dönüştür'
+    },
+    entityPick: {
+      cancel: 'Seçimi iptal et'
     },
     layers: {
       title: 'Katmanlar',
@@ -1142,6 +1255,21 @@ const AR_MESSAGES: AcExMessageTree = {
     'rgb': 'RGB: ',
     'input': 'اللون',
     'inputPlaceholder': '1-255 أو #RRGGBB'
+  },
+  'textHeight': {
+    'title': 'ارتفاع النص',
+    'close': 'إغلاق',
+    'ok': 'موافق',
+    'cancel': 'إلغاء',
+    'adaptive': 'ملاءمة الشاشة',
+    'custom': 'ارتفاع نص مخصص',
+    'customPlaceholder': 'ارتفاع العالم',
+    'fromScreen': 'من حجم الشاشة',
+    'fromScreenHint':
+      'أدخل حجم النص المطلوب على الشاشة عند التكبير الحالي. يُحوَّل إلى ارتفاع ثابت في إحداثيات الرسم ويبقى كما هو عند تغيير التكبير لاحقًا.',
+    'screenPxPlaceholder': 'حجم الخط',
+    'screenUnit': 'px',
+    'convert': 'تحويل'
   },
   'layers': {
     'title': 'الطبقات',

@@ -93,6 +93,30 @@ export default {
     color: 'Renk',
     fontSize: 'Yazı yüksekliği'
   },
+  shortCutToolbar: {
+    more: 'Daha fazla',
+    undo: 'Geri al',
+    redo: 'Yinele',
+    erase: 'Sil'
+  },
+  textHeight: {
+    title: 'Yazı Yüksekliği',
+    close: 'Kapat',
+    ok: 'Tamam',
+    cancel: 'İptal',
+    adaptive: 'Ekrana uyarla',
+    custom: 'Özel yazı yüksekliği',
+    customPlaceholder: 'Dünya yüksekliği',
+    fromScreen: 'Ekran boyutundan',
+    fromScreenHint:
+      'Geçerli yakınlaştırmada ekranda istediğiniz yazı boyutunu girin. Sabit bir dünya yüksekliğine dönüştürülür; sonra yakınlaştırınca bu yükseklik değişmez.',
+    screenPxPlaceholder: 'Yazı boyutu',
+    screenUnit: 'px',
+    convert: 'Dönüştür'
+  },
+  entityPick: {
+    cancel: 'Seçimi iptal et'
+  },
   colorPicker: {
     title: 'Renk Seç',
     close: 'Kapat',
